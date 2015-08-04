@@ -10,4 +10,6 @@
     <p
       @v-text message
     <l-image
-      @logo {{logo}}
+      @logo {{logoSquare}}
+    <l-image
+      @logo {{logoRectangle}}
