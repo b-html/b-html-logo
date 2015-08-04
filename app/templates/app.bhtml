@@ -1,0 +1,11 @@
+<div
+  @class app
+  <div
+    @class app-header
+    <h1
+      @class app-title
+      b-html logo
+  <div
+    @class app-content
+    <p
+      @v-text message
