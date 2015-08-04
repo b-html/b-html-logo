@@ -1,3 +1,5 @@
+template = require '../templates/image'
+
 module.exports =
   data: ->
     logo: null
@@ -6,3 +8,4 @@ module.exports =
       "#{@logo.width()}x#{@logo.height()}"
     src: ->
       @logo.dataUri()
+  template: template

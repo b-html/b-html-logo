@@ -1,5 +1,6 @@
 assert = require 'power-assert'
 component = require '../../src/views/image'
+template = require '../../src/templates/image'
 
 describe 'Image', ->
   describe '#computed#alt', ->
@@ -22,4 +23,8 @@ describe 'Image', ->
 
   describe '#data', ->
     it 'works', ->
-      assert component.data(), logo: null
+      assert.deepEqual component.data(), logo: null
+
+  describe '#template', ->
+    it 'works', ->
+      assert component.template is template
