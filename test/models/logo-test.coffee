@@ -8,6 +8,6 @@ describe 'Logo', ->
       height: 100
       svg: '<svg></svg>'
 
-    assert logo.width is 200
-    assert logo.height is 100
-    assert logo.svg is '<svg></svg>'
+    assert logo.width() is 200
+    assert logo.height() is 100
+    assert logo.svg() is '<svg></svg>'
