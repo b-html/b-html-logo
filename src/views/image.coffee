@@ -5,6 +5,10 @@ module.exports =
   computed:
     alt: ->
       "#{@logo.width()}x#{@logo.height()}"
+    height: ->
+      @logo.height()
     src: ->
       @logo.dataUri()
+    width: ->
+      @logo.width()
   template: template

@@ -12,6 +12,14 @@ describe 'Image', ->
           height: -> 200
       assert alt.apply(context, []) is '100x200'
 
+  describe '#computed#height', ->
+    it 'works', ->
+      height = component.computed.height
+      context =
+        logo:
+          height: -> 200
+      assert height.apply(context, []) is 200
+
   describe '#computed#src', ->
     it 'works', ->
       src = component.computed.src
@@ -20,6 +28,14 @@ describe 'Image', ->
           dataUri: ->
             'data uri'
       assert src.apply(context, []) is 'data uri'
+
+  describe '#computed#width', ->
+    it 'works', ->
+      widtg = component.computed.width
+      context =
+        logo:
+          width: -> 200
+      assert height.apply(context, []) is 200
 
   describe '#props', ->
     it 'works', ->
