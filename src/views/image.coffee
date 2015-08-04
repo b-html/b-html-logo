@@ -1,8 +1,7 @@
 template = require '../templates/image'
 
 module.exports =
-  data: ->
-    logo: null
+  props: ['logo']
   computed:
     alt: ->
       "#{@logo.width()}x#{@logo.height()}"

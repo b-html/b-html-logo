@@ -21,9 +21,9 @@ describe 'Image', ->
             'data uri'
       assert src.apply(context, []) is 'data uri'
 
-  describe '#data', ->
+  describe '#props', ->
     it 'works', ->
-      assert.deepEqual component.data(), logo: null
+      assert.deepEqual component.props, ['logo']
 
   describe '#template', ->
     it 'works', ->
