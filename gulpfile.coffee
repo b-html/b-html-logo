@@ -151,7 +151,9 @@ gulp.task 'test(dev)', ['build-test(dev)'], ->
 gulp.task 'watch', ['build(dev)'], ->
   watch [
     dirs.src + '*.coffee'
+    dirs.src + '**/*.coffee'
     dirs.test + '*.coffee'
+    dirs.test + '**/*.coffee'
   ], ->
     run.apply run, [
       'build:coffee(dev)'
@@ -169,6 +171,7 @@ gulp.task 'watch', ['build(dev)'], ->
 
   watch [
     dirs.template + '*.bhtml'
+    dirs.template + '**/*.bhtml'
   ], ->
     run.apply run, [
       'build:template'
@@ -176,6 +179,7 @@ gulp.task 'watch', ['build(dev)'], ->
     ]
 
   watch [
+    dirs.app + '*.less'
     dirs.app + '**/*.less'
   ], ->
     run.apply run, [
