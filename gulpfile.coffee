@@ -21,6 +21,8 @@ watchify = require 'watchify'
 dirs =
   app: './app/'                        # html and other resource files
   dist: './dist/'                      # html, bundled javascript and other resource files
+  distScripts: './dist/scripts/'       # main.js
+  distStyles: './dist/styles/'         # main.css
   src: './src/'                        # coffee-script files
   template: './app/templates/'         # b-html files
   test: './test/'                      # coffee-script files for testing
@@ -75,32 +77,32 @@ gulp.task 'build:js', ->
     entries: [dirs.tmpSrc + 'index.js']
     debug: false
   b.bundle()
-  .pipe source 'bundle.js'
+  .pipe source 'main.js'
   .pipe buffer()
   .pipe uglify()
-  .pipe gulp.dest dirs.dist
+  .pipe gulp.dest dirs.distScripts
 
 gulp.task 'build:js(dev)', ->
   b = browserify
     entries: [dirs.tmpSrc + 'index.js']
     debug: true
   b.bundle()
-  .pipe source 'bundle.js'
+  .pipe source 'main.js'
   .pipe buffer()
   .pipe sourcemaps.init loadMaps: true
   .pipe sourcemaps.write './'
-  .pipe gulp.dest dirs.dist
+  .pipe gulp.dest dirs.distScripts
 
 gulp.task 'build:less', ->
   gulp.src dirs.app + 'styles/index.less'
   .pipe less()
   .pipe minifyCss()
-  .pipe gulp.dest dirs.dist
+  .pipe gulp.dest dirs.distStyles
 
 gulp.task 'build:less(dev)', ->
   gulp.src dirs.app + 'styles/index.less'
   .pipe ignoreError less()
-  .pipe gulp.dest dirs.dist
+  .pipe gulp.dest dirs.distStyles
 
 gulp.task 'build:template', ->
   gulp.src dirs.template + '*.bhtml'
@@ -203,11 +205,11 @@ gulp.task 'watch', ['build(dev)'], ->
   bundle = ->
     w.bundle()
     .on 'error', gutil.log.bind(gutil)
-    .pipe source 'bundle.js'
+    .pipe source 'main.js'
     .pipe buffer()
     .pipe sourcemaps.init loadMaps: true
     .pipe sourcemaps.write './'
-    .pipe gulp.dest dirs.dist
+    .pipe gulp.dest dirs.distScripts
     .on 'end', ->
       browserSync.reload()
 
