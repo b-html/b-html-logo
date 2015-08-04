@@ -7,8 +7,6 @@
       b-html logo
   <div
     @class app-content
-    <p
-      @v-text message
     <l-image
       @logo {{logoSquare}}
     <l-image

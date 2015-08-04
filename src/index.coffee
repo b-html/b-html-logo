@@ -11,7 +11,6 @@ new Vue(
     logoRectangle: new Logo(width: 200, height: 100, svg: logoRectangle)
     # original size : 200x200
     logoSquare: new Logo(width: 100, height: 100, svg: logoSquare)
-    message: 'Hello, Vue.js'
   template: appTemplate
   components:
     'l-image': imageView
