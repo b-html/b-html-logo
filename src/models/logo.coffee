@@ -1,5 +1,3 @@
-Datauri = require 'datauri'
-
 class Logo
   constructor: ({ width, height, svg }) ->
     @_width = width
@@ -7,8 +5,8 @@ class Logo
     @_svg = svg
 
   dataUri: ->
-    uri = new Datauri().format '.svg', @_svg
-    uri.content # data:image/svg+xml;base64,...
+    encoded = new Buffer(@_svg).toString('base64')
+    'data:image/svg+xml;base64,' + encoded
 
   height: ->
     @_height

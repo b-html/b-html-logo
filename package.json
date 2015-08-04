@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "b-html": "^0.7.0",
-    "datauri": "^0.7.1",
     "vue": "^0.12.8"
   },
   "devDependencies": {
