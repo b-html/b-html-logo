@@ -9,7 +9,8 @@ new Vue(
   el: '#app'
   data:
     logoRectangle: new Logo(width: 200, height: 100, svg: logoRectangle)
-    logoSquare: new Logo(width: 200, height: 200, svg: logoSquare)
+    # original size : 200x200
+    logoSquare: new Logo(width: 100, height: 100, svg: logoSquare)
     message: 'Hello, Vue.js'
   template: appTemplate
   components:
