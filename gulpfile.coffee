@@ -94,13 +94,13 @@ gulp.task 'build:js(dev)', ->
   .pipe gulp.dest dirs.distScripts
 
 gulp.task 'build:less', ->
-  gulp.src dirs.app + 'styles/index.less'
+  gulp.src dirs.app + 'styles/main.less'
   .pipe less()
   .pipe minifyCss()
   .pipe gulp.dest dirs.distStyles
 
 gulp.task 'build:less(dev)', ->
-  gulp.src dirs.app + 'styles/index.less'
+  gulp.src dirs.app + 'styles/main.less'
   .pipe ignoreError less()
   .pipe gulp.dest dirs.distStyles
 
