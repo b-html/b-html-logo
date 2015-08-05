@@ -4,7 +4,9 @@
     @class app-header
     <h1
       @class app-title
-      b-html logo
+      <a
+        @href https://github.com/b-html/b-html
+        b-html logo
   <div
     @class app-content
     <div
