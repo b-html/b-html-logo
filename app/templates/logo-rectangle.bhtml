@@ -6,5 +6,5 @@
   @xmlns http://www.w3.org/2000/svg
   @version 1.1
   <path
-    @d M 0 0 h 200 v 10 h -200 v -10 m 15 25 h 10 v 20 h 30 v -20 h 10 v 20 h 30 v -20 h 10 v 20 h 70 v -20 h 10 v 50 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -30 v -50 m 10 30 v 10 h 10 v -10 h -10 m -25 35 h 200 v 10 h -200 v -10 z
+    @d M 0 0 h 200 v 10 h -200 v -10 m 10 30 h 10 v 20 h 40 v -20 h 10 v 20 h 30 v -20 h 10 v 20 h 70 v -20 h 10 v 50 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -10 v 20 h -10 v -20 h -20 v 20 h -30 v -50 m 10 30 v 10 h 10 v -10 h -10 m -20 30 h 200 v 10 h -200 v -10 z
     @fill #0077CF
