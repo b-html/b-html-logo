@@ -7,7 +7,21 @@
       b-html logo
   <div
     @class app-content
-    <l-image
-      @logo {{logoSquare}}
-    <l-image
-      @logo {{logoRectangle}}
+    <div
+      @class image-list
+      <h1
+        @class image-list-title
+        SVG
+      <l-image
+        @logo {{logoSquare}}
+      <l-image
+        @logo {{logoRectangle}}
+    <div
+      @class canvas-list
+      <h1
+        @class canvas-list-title
+        Canvas
+      <l-canvas
+        @logo {{logoSquare}}
+      <l-canvas
+        @logo {{logoRectangle}}
