@@ -31,11 +31,11 @@ describe 'Image', ->
 
   describe '#computed#width', ->
     it 'works', ->
-      widtg = component.computed.width
+      width = component.computed.width
       context =
         logo:
           width: -> 200
-      assert height.apply(context, []) is 200
+      assert width.apply(context, []) is 200
 
   describe '#props', ->
     it 'works', ->
