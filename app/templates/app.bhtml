@@ -18,6 +18,8 @@
         @logo {{logoSquare}}
       <l-image
         @logo {{logoRectangle}}
+      <l-image
+        @logo {{logoWebsite}}
     <div
       @class canvas-list
       <h1
@@ -27,3 +29,5 @@
         @logo {{logoSquare}}
       <l-canvas
         @logo {{logoRectangle}}
+      <l-canvas
+        @logo {{logoWebsite}}
